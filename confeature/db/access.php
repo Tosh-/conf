@@ -48,7 +48,19 @@
 defined('MOODLE_INTERNAL') || die();
 
 $capabilities = array(
-/***************************** remove these comment marks and modify the code as needed*/
+
+	'mod/confeature:addinstance' => array(
+			'riskbitmask' => RISK_CONFIG,
+	
+			'captype' => 'write',
+			'contextlevel' => CONTEXT_COURSE,
+			'archetypes' => array(
+				'editingteacher' => CAP_ALLOW,
+				'manager' => CAP_ALLOW,
+				'coursecreator' => CAP_ALLOW,
+				'manager' => CAP_ALLOW
+			),
+	),
 
 	'mod/confeature:createconference' => array(
 			'riskbitmask' => RISK_CONFIG,
@@ -87,6 +99,5 @@ $capabilities = array(
             'manager' => CAP_ALLOW
         )
     ),
-/******************************/
 );
 

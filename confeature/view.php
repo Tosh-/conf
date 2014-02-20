@@ -78,8 +78,7 @@ echo "is ADMIN<br/>";
 //Create a conference
 if(has_capability('mod/confeature:createconference', $context)){
 	echo $OUTPUT->box_start();
-	//some stuff here
-	echo "Create a conference 1 !";
+	echo "CONFEATURE API";
 	echo $OUTPUT->box_end();
 }
 
