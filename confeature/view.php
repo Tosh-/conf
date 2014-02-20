@@ -76,10 +76,12 @@ echo $OUTPUT->heading('Yay! It works!');
 echo "is ADMIN<br/>";
 }*/
 //Create a conference
-echo $OUTPUT->box_start();
-//some stuff here
-echo "Create a conference !";
-echo $OUTPUT->box_end();
+if(has_capability('mod/confeature:createconference', $context)){
+	echo $OUTPUT->box_start();
+	//some stuff here
+	echo "Create a conference 1 !";
+	echo $OUTPUT->box_end();
+}
 
 //Streaming a conference
 echo $OUTPUT->box_start();
