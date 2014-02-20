@@ -66,12 +66,13 @@ $PAGE->set_context($context);
 // Output starts here
 echo $OUTPUT->header();
 
-if ($confeature->intro) { // Conditions to show the intro can change to look for own settings or whatever
+/*if ($confeature->intro) { // Conditions to show the intro can change to look for own settings or whatever
     echo $OUTPUT->box(format_module_intro('confeature', $confeature, $cm->id), 'generalbox mod_introbox', 'confeatureintro');
-}
+*/
 
 // Replace the following lines with you own code
 echo $OUTPUT->heading('Yay! It works!');
+echo format_module_intro('confeature', $confeature, $cm->id);
 /*if (has_capability('admin', $context->id, true)) {
 echo "is ADMIN<br/>";
 }*/
@@ -83,16 +84,18 @@ if(has_capability('mod/confeature:createconference', $context)){
 }
 
 //Streaming a conference
-echo $OUTPUT->box_start();
-//some stuff here
-echo "Stream a conference !";
-echo $OUTPUT->box_end();
+if(has_capability('mod/confeature:stream', $context)){
+	echo $OUTPUT->box_start();
+	echo "Stream a conference !";
+	echo $OUTPUT->box_end();
+}
 
 //Viewing a conference
-echo $OUTPUT->box_start();
-//some stuff here
-echo "View a conference !";
-echo $OUTPUT->box_end();
+if(has_capability('mod/confeature:watch', $context)){
+	echo $OUTPUT->box_start();
+	echo '<iframe width="560" height="315" src="//www.youtube.com/embed/5WXqw4vmwzk" frameborder="0" allowfullscreen></iframe>';
+	echo $OUTPUT->box_end();
+}
 
 // Finish the page
 echo $OUTPUT->footer();
