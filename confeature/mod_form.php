@@ -63,10 +63,14 @@ class mod_confeature_mod_form extends moodleform_mod {
         //-------------------------------------------------------------------------------
         // Adding the rest of confeature settings, spreeading all them into this fieldset
         // or adding more fieldsets ('header' elements) if needed for better logic
-        $mform->addElement('static', 'label1', 'confeaturesetting1', 'Your confeature fields go here. Replace me!');
+        //$mform->addElement('static', 'label1', 'confeaturesetting1', 'Your confeature fields go here. Replace me!');
 
-        $mform->addElement('header', 'confeaturefieldset', get_string('confeaturefieldset', 'confeature'));
-        $mform->addElement('static', 'label2', 'confeaturesetting2', 'Your confeature fields go here. Replace me!');
+        $mform->addElement('header', 'settings', 'Settings');
+		$choices[0]=1080;
+		$choices[1]=720;
+		$choices[2]=480;
+		$choices[3]=260;
+        $mform->addElement('select', 'max_quality', 'Maximum quality', $choices);
 
         //-------------------------------------------------------------------------------
         // add standard elements, common to all modules
