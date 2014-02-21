@@ -29,12 +29,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['modulename'] = 'confeature';
-$string['modulenameplural'] = 'confeatures';
-$string['modulename_help'] = 'Use the confeature module for... | The confeature module allows...';
+$string['modulename'] = 'Confeature conference';
+$string['modulenameplural'] = 'Confeature conferences';
+$string['modulename_help'] = 'The confeature module allows to create, participate and watch educational conferences.';
 $string['confeaturefieldset'] = 'Custom example fieldset';
-$string['confeaturename'] = 'confeature name';
-$string['confeaturename_help'] = 'This is the content of the help tooltip associated with the confeaturename field. Markdown syntax is supported.';
+$string['confeaturename'] = 'Conference title';
+$string['confeaturename_help'] = 'This is the name of the conference.';
 $string['confeature'] = 'confeature';
-$string['pluginadministration'] = 'confeature administration';
+$string['pluginadministration'] = 'Confeature administration';
 $string['pluginname'] = 'confeature';

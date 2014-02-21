@@ -30,7 +30,7 @@
  * @see upgrade_plugins_modules()
  */
 function xmldb_confeature_install() {
-	
+	//Diplay on page after installation
 }
 
 /**
