@@ -80,7 +80,7 @@ function confeature_add_instance(stdClass $confeature, mod_confeature_mod_form $
 	echo 'Created';
 	
 	//Logout
-	if(!confeature_api_login()) return -1;
+	if(!confeature_api_logout()) return -1;
 	
     return $DB->insert_record('confeature', $confeature);
 }

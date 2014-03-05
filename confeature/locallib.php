@@ -39,7 +39,7 @@ require_once($CFG->dirroot.'/mod/confeature/config.php');
 function confeature_api_login() {
 	$url = constant('CONFEATURE_API_URL').'/user/login';
 	echo $url;
-	$data = array('username' => constant('CONFEATURE_API_USERNAME');,
+	$data = array('username' => constant('CONFEATURE_API_USERNAME'),
 				'password' => constant('CONFEATURE_API_PASSWORD'));
 	$options = array(
 		'http' => array(
