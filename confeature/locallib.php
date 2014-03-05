@@ -34,6 +34,36 @@ defined('MOODLE_INTERNAL') || die();
  * @param array $things
  * @return object
  */
-//function confeature_do_something_useful(array $things) {
-//    return new stdClass();
-//}
+function confeature_login() {
+	$url = 'http://server.com/api/user/login'; //TODO Modify with real path
+	$data = array('username' => '123dudu', 'password' => '123dudu');//TODO Modify with logs in an other conf file
+	$options = array(
+		'http' => array(
+			'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+			'method'  => 'POST',
+			'content' => http_build_query($data),
+		),
+	);
+	$context  = stream_context_create($options);
+	$json = file_get_contents($url, false, $context);
+	$result = json_decode($json);
+	var_dump($result);
+    return true;
+}
+
+function confeature_logout() {
+	$url = 'http://server.com/api/user/logout'; //TODO Modify with real path
+	$data = array();
+	$options = array(
+		'http' => array(
+			'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+			'method'  => 'POST',
+			'content' => http_build_query($data),
+		),
+	);
+	$context  = stream_context_create($options);
+	$json = file_get_contents($url, false, $context);
+	$result = json_decode($json);
+	var_dump($result);
+	return true;
+}
