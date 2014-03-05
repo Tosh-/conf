@@ -34,7 +34,7 @@ defined('MOODLE_INTERNAL') || die();
  * @param array $things
  * @return object
  */
-function confeature_login() {
+function confeature_api_login() {
 	$url = 'http://server.com/api/user/login'; //TODO Modify with real path
 	$data = array('username' => '123dudu', 'password' => '123dudu');//TODO Modify with logs in an other conf file
 	$options = array(
@@ -51,7 +51,7 @@ function confeature_login() {
     return true;
 }
 
-function confeature_logout() {
+function confeature_api_logout() {
 	$url = 'http://server.com/api/user/logout'; //TODO Modify with real path
 	$data = array();
 	$options = array(
