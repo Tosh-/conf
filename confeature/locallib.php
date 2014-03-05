@@ -67,3 +67,32 @@ function confeature_api_logout() {
 	var_dump($result);
 	return true;
 }
+
+function confeature_api_create() {
+	$url = 'http://server.com/api/conference/create'; //TODO Modify with real path
+	$data = array('title' => 'My title',//TODO Modify with parameters
+				  'description' => 'My description',
+				  'maxSpeakers' => '5',
+				  'maxViewers' => '100',
+				  'maxResolution' => '1080',
+				  'timerToggle' => '0',//TODO choose ending toggle choice for Moodle
+				  'inactivityToggle' => '1',
+				  'endingHourToggle' => '0',
+				  'noSpeakersToggle' => '0',
+				  'timerDuration' => '120',
+				  'inactivityDuration' => '20',
+				  'privacy' => 'public',
+				  'endingHour' => '2014-12-31 00:00:00');
+	$options = array(
+		'http' => array(
+			'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+			'method'  => 'POST',
+			'content' => http_build_query($data),
+		),
+	);
+	$context  = stream_context_create($options);
+	$json = file_get_contents($url, false, $context);
+	$result = json_decode($json);
+	var_dump($result);
+    return true;
+}
