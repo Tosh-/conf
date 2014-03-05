@@ -31,6 +31,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+require_once(localib.php);
+
 /** example constant */
 //define('NEWMODULE_ULTIMATE_ANSWER', 42);
 
@@ -71,8 +73,15 @@ function confeature_add_instance(stdClass $confeature, mod_confeature_mod_form $
 
     $confeature->timecreated = time();
 
-    # You may have to add extra stuff in here #
-
+    //Login
+	if(!confeature_api_login()) return -1;
+	
+	//Create conference
+	echo 'Created';
+	
+	//Logout
+	if(!confeature_api_login()) return -1;
+	
     return $DB->insert_record('confeature', $confeature);
 }
 
