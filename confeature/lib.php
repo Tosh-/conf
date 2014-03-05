@@ -72,7 +72,7 @@ function confeature_add_instance(stdClass $confeature, mod_confeature_mod_form $
     global $DB;
 
     $confeature->timecreated = time();
-
+	var_dump ($mform);
     //Login
 	if(!confeature_api_login()) return -1;
 	

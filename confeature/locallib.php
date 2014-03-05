@@ -39,7 +39,7 @@ require_once($CFG->dirroot.'/mod/confeature/config.php');
 function confeature_api_login() {
 	$url = constant('CONFEATURE_API_URL').'/user/login';
 	echo $url;
-	$data = array('username' => constant('CONFEATURE_API_USERNAME'),
+	/*$data = array('username' => constant('CONFEATURE_API_USERNAME'),
 				'password' => constant('CONFEATURE_API_PASSWORD'));
 	$options = array(
 		'http' => array(
@@ -52,7 +52,32 @@ function confeature_api_login() {
 	$json = file_get_contents($url, false, $context);
 	$result = json_decode($json);
 	var_dump($result);
-    return true;
+    return true;*/
+	 // Create map with request parameters
+	$params = array ('username' => constant('CONFEATURE_API_USERNAME'),
+				'password' => constant('CONFEATURE_API_PASSWORD'));
+	 
+	// Build Http query using params
+	$query = http_build_query ($params);
+	 
+	// Create Http context details
+	$contextData = array (
+					'method' => 'POST',
+					'header' => "Connection: close\r\n".
+								"Content-Length: ".strlen($query)."\r\n".
+								"Content-type: application/x-www-form-urlencoded\r\n",
+					'content'=> $query );
+	 
+	// Create context resource for our request
+	$context = stream_context_create (array ( 'http' => $contextData ));
+	 
+	// Read page rendered as result of your POST request
+	$result =  file_get_contents (
+					  $url,  // page url
+					  false,
+					  $context);
+	var_dump($result);
+	return true;
 }
 
 function confeature_api_logout() {
