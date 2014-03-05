@@ -28,6 +28,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+require_once($CFG->dirroot.'/mod/confeature/config.php');
+
 /**
  * Does something really useful with the passed things
  *
@@ -35,8 +37,10 @@ defined('MOODLE_INTERNAL') || die();
  * @return object
  */
 function confeature_api_login() {
-	$url = 'http://server.com/api/user/login'; //TODO Modify with real path
-	$data = array('username' => '123dudu', 'password' => '123dudu');//TODO Modify with logs in an other conf file
+	$url = constant('CONFEATURE_API_URL').'/user/login';
+	echo $url;
+	$data = array('username' => constant('CONFEATURE_API_USERNAME');,
+				'password' => constant('CONFEATURE_API_PASSWORD'));
 	$options = array(
 		'http' => array(
 			'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
@@ -52,7 +56,7 @@ function confeature_api_login() {
 }
 
 function confeature_api_logout() {
-	$url = 'http://server.com/api/user/logout'; //TODO Modify with real path
+	$url = constant('CONFEATURE_API_URL').'/user/logout'; //TODO Modify with real path
 	$data = array();
 	$options = array(
 		'http' => array(
@@ -69,7 +73,7 @@ function confeature_api_logout() {
 }
 
 function confeature_api_create() {
-	$url = 'http://server.com/api/conference/create'; //TODO Modify with real path
+	$url = constant('CONFEATURE_API_URL').'/conference/create'; //TODO Modify with real path
 	$data = array('title' => 'My title',//TODO Modify with parameters
 				  'description' => 'My description',
 				  'maxSpeakers' => '5',
