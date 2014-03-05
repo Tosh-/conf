@@ -31,7 +31,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-require_once(localib.php);
+require_once($CFG->dirroot.'/mod/confeature/locallib.php');
 
 /** example constant */
 //define('NEWMODULE_ULTIMATE_ANSWER', 42);
