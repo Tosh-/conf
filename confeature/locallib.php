@@ -38,67 +38,59 @@ require_once($CFG->dirroot.'/mod/confeature/config.php');
  */
 function confeature_api_login() {
 	$url = constant('CONFEATURE_API_URL').'/user/login';
-	echo $url;
-	/*$data = array('username' => constant('CONFEATURE_API_USERNAME'),
-				'password' => constant('CONFEATURE_API_PASSWORD'));
-	$options = array(
-		'http' => array(
-			'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-			'method'  => 'POST',
-			'content' => http_build_query($data),
-		),
-	);
-	$context  = stream_context_create($options);
-	$json = file_get_contents($url, false, $context);
-	$result = json_decode($json);
+	
+	// CURL
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_POST, 1);
+	
+	curl_setopt($curl, CURLOPT_POSTFIELDS,"username=".constant('CONFEATURE_API_USERNAME')."&password=".constant('CONFEATURE_API_PASSWORD'));
+	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($curl, CURLOPT_URL, $url);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+													'Accept: application/json',
+													'Content-Length: '.strlen("username=alex&password=alex")
+												)
+				);
+	
+	 $json = curl_exec($curl);	
+	 curl_close($curl);
+	var_dump($json);
+	 $result = json_decode($json);
 	var_dump($result);
-    return true;*/
-	 // Create map with request parameters
-	$params = array ('username' => constant('CONFEATURE_API_USERNAME'),
-				'password' => constant('CONFEATURE_API_PASSWORD'));
-	 
-	// Build Http query using params
-	$query = http_build_query ($params);
-	 
-	// Create Http context details
-	$contextData = array (
-					'method' => 'POST',
-					'header' => "Connection: close\r\n".
-								"Content-Length: ".strlen($query)."\r\n".
-								"Content-type: application/x-www-form-urlencoded\r\n",
-					'content'=> $query );
-	 
-	// Create context resource for our request
-	$context = stream_context_create (array ( 'http' => $contextData ));
-	 
-	// Read page rendered as result of your POST request
-	$result =  file_get_contents (
-					  $url,  // page url
-					  false,
-					  $context);
-	var_dump($result);
+	
+	
 	return true;
 }
 
 function confeature_api_logout() {
-	$url = constant('CONFEATURE_API_URL').'/user/logout'; //TODO Modify with real path
-	$data = array();
-	$options = array(
-		'http' => array(
-			'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-			'method'  => 'POST',
-			'content' => http_build_query($data),
-		),
-	);
-	$context  = stream_context_create($options);
-	$json = file_get_contents($url, false, $context);
-	$result = json_decode($json);
+	$url = constant('CONFEATURE_API_URL').'/user/logout';
+	// CURL
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_POST, 1);
+	
+	
+	if ($params)
+		curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+		curl_setopt($curl, CURLOPT_URL, $url);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+														'Accept: application/json'
+													)
+					);
+		
+	 $json = curl_exec($curl);	
+	 curl_close($curl);
+	var_dump($json);
+	 $result = json_decode($json);
 	var_dump($result);
+	
+	
 	return true;
 }
 
 function confeature_api_create() {
-	$url = constant('CONFEATURE_API_URL').'/conference/create'; //TODO Modify with real path
+	/*$url = constant('CONFEATURE_API_URL').'/conference/create'; //TODO Modify with real path
 	$data = array('title' => 'My title',//TODO Modify with parameters
 				  'description' => 'My description',
 				  'maxSpeakers' => '5',
@@ -123,5 +115,25 @@ function confeature_api_create() {
 	$json = file_get_contents($url, false, $context);
 	$result = json_decode($json);
 	var_dump($result);
-    return true;
+    return true;*/
+	// CURL
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_POST, 1);
+	
+	curl_setopt($curl, CURLOPT_POSTFIELDS,"username=".constant('CONFEATURE_API_USERNAME')."&password=".constant('CONFEATURE_API_PASSWORD'));
+	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($curl, CURLOPT_URL, $url);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+													'Accept: application/json',
+													'Content-Length: '.strlen("username=alex&password=alex")
+												)
+				);
+	
+	 $json = curl_exec($curl);	
+	 curl_close($curl);
+	var_dump($json);
+	 $result = json_decode($json);
+	var_dump($result);
+	return true;
 }
