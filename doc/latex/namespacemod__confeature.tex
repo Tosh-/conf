@@ -1,0 +1,105 @@
+\hypertarget{namespacemod__confeature}{\section{mod\-\_\-confeature Namespace Reference}
+\label{namespacemod__confeature}\index{mod\-\_\-confeature@{mod\-\_\-confeature}}
+}
+
+
+\subsection{Detailed Description}
+Capability definitions for the confeature module
+
+The capabilities are loaded into the database table when the module is installed or updated. Whenever the capability definitions are updated, the module version number should be bumped up.
+
+The system has four possible values for a capability\-: C\-A\-P\-\_\-\-A\-L\-L\-O\-W, C\-A\-P\-\_\-\-P\-R\-E\-V\-E\-N\-T, C\-A\-P\-\_\-\-P\-R\-O\-H\-I\-B\-I\-T, and inherit (not set).
+
+It is important that capability names are unique. The naming convention for capabilities that are specific to modules and blocks is as follows\-: \mbox{[}mod/block\mbox{]}/$<$plugin\-\_\-name$>$\-:$<$capabilityname$>$
+
+component\-\_\-name should be the same as the directory name of the mod or block.
+
+Core moodle capabilities are defined thus\-: moodle/$<$capabilityclass$>$\-:$<$capabilityname$>$
+
+Examples\-: mod/forum\-:viewpost block/recent\-\_\-activity\-:view moodle/site\-:deleteuser
+
+The variable name for the capability definitions array is \$capabilities
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+This file replaces the legacy S\-T\-A\-T\-E\-M\-E\-N\-T\-S section in db/install.\-xml, \hyperlink{lib_8php}{lib.\-php}/modulename\-\_\-install() post installation hook and partially defaults.\-php
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name \href{mailto:your@email.adress}{\tt your@email.\-adress}  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+Definition of log events
+
+N\-O\-T\-E\-: this is an example how to insert log event during installation/update. It is not really essential to know about it, but these logs were created as example in the previous 1.\-9 N\-E\-W\-M\-O\-D\-U\-L\-E.
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name \href{mailto:your@email.adress}{\tt your@email.\-adress}  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+\begin{DoxySeeAlso}{See Also}
+uninstall\-\_\-plugin()
+\end{DoxySeeAlso}
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name \href{mailto:your@email.adress}{\tt your@email.\-adress}  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+This file keeps track of upgrades to the confeature module
+
+Sometimes, changes between versions involve alterations to database structures and other major things that may break installations. The upgrade function in this file will attempt to perform all the necessary actions to upgrade your older installation to the current version. If there's something it cannot do itself, it will tell you what you need to do. The commands in here will all be database-\/neutral, using the functions defined in D\-L\-L libraries.
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+Redirect the user to the appropriate submission related page
+
+This is a one-\/line short description of the file
+
+You can have a rather longer description of the file as well, if you like, and it can span multiple lines.
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+English strings for confeature
+
+You can have a rather longer description of the file as well, if you like, and it can span multiple lines.
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+Library of interface functions and constants for module confeature
+
+All the core Moodle functions, neeeded to allow the module to work integrated in Moodle should be placed here. All the confeature specific functions, needed to implement all the module logic, should go to \hyperlink{locallib_8php}{locallib.\-php}. This will help to save some memory when Moodle is performing actions across all modules.
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+File browsing support for confeature file areas
+
+Serves the files from the confeature file areas
+
+Internal library of functions for module confeature
+
+All the confeature specific functions, needed to implement the module logic, should go here. Never include this file from your \hyperlink{lib_8php}{lib.\-php}!
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+The main confeature configuration form
+
+It uses the standard core Moodle formslib. For more info about them, please visit\-: \href{http://docs.moodle.org/en/Development:lib/formslib.php}{\tt http\-://docs.\-moodle.\-org/en/\-Development\-:lib/formslib.\-php}
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+Defines the version of confeature
+
+This code fragment is called by moodle\-\_\-needs\-\_\-upgrading() and /admin/index.php
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later
+\end{DoxyCopyright}
+Prints a particular instance of confeature
+
+You can have a rather longer description of the file as well, if you like, and it can span multiple lines.
+
+\begin{DoxyCopyright}{Copyright}
+2011 Your Name  \href{http://www.gnu.org/copyleft/gpl.html}{\tt http\-://www.\-gnu.\-org/copyleft/gpl.\-html} G\-N\-U G\-P\-L v3 or later 
+\end{DoxyCopyright}

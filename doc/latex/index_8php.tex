@@ -1,0 +1,61 @@
+\hypertarget{index_8php}{\section{confeature/index.php File Reference}
+\label{index_8php}\index{confeature/index.\-php@{confeature/index.\-php}}
+}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacemod__confeature}{mod\-\_\-confeature}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{index_8php_ae97941710d863131c700f069b109991e}{\$id} = required\-\_\-param('id', P\-A\-R\-A\-M\-\_\-\-I\-N\-T)
+\begin{DoxyCompactList}\small\item\em Replace confeature with the name of your module and remove this line. \end{DoxyCompactList}\item 
+\hyperlink{index_8php_a0cbf208c448812ce49f3fe3b7de082be}{\$course} = \$D\-B-\/$>$get\-\_\-record('course', array('id' =$>$ \$id), '$\ast$', M\-U\-S\-T\-\_\-\-E\-X\-I\-S\-T)
+\item 
+\hyperlink{index_8php_a4a701989e53801a5375cfad4d1395ee8}{\$coursecontext} = context\-\_\-course\-::instance(\$course-\/$>$id)
+\item 
+\hyperlink{view_8php_abf65f0046bca4eaf168cd62bab83f411}{if}(!\$confeatures=get\-\_\-all\-\_\-instances\-\_\-in\-\_\-course('confeature', \\*
+\$course)) \hyperlink{index_8php_a96b34b1df0434e68adafe20938e2864a}{\$table} = new html\-\_\-table()
+\item 
+\hyperlink{view_8php_abf65f0046bca4eaf168cd62bab83f411}{if}(\$course-\/$>$format== 'weeks') \\*
+else \hyperlink{view_8php_abf65f0046bca4eaf168cd62bab83f411}{if}(\$course-\/$>$format== \\*
+'topics') \hyperlink{index_8php_a0799edd8facb2c34db7e8afb18dad21b}{else}
+\item 
+\$table \hyperlink{index_8php_a8157eb76abbafb202f62b1c82d099159}{align} = array('left', 'left', 'left')
+\item 
+\hyperlink{index_8php_a1dfad6a7acd4569718f5bf04239e3e28}{foreach} (\$confeatures as \$confeature)
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{index_8php_a0cbf208c448812ce49f3fe3b7de082be}{\index{index.\-php@{index.\-php}!\$course@{\$course}}
+\index{\$course@{\$course}!index.php@{index.\-php}}
+\subsubsection[{\$course}]{\setlength{\rightskip}{0pt plus 5cm}\$course = \$D\-B-\/$>$get\-\_\-record('course', array('id' =$>$ \$id), '$\ast$', M\-U\-S\-T\-\_\-\-E\-X\-I\-S\-T)}}\label{index_8php_a0cbf208c448812ce49f3fe3b7de082be}
+\hypertarget{index_8php_a4a701989e53801a5375cfad4d1395ee8}{\index{index.\-php@{index.\-php}!\$coursecontext@{\$coursecontext}}
+\index{\$coursecontext@{\$coursecontext}!index.php@{index.\-php}}
+\subsubsection[{\$coursecontext}]{\setlength{\rightskip}{0pt plus 5cm}\$coursecontext = context\-\_\-course\-::instance(\$course-\/$>$id)}}\label{index_8php_a4a701989e53801a5375cfad4d1395ee8}
+\hypertarget{index_8php_ae97941710d863131c700f069b109991e}{\index{index.\-php@{index.\-php}!\$id@{\$id}}
+\index{\$id@{\$id}!index.php@{index.\-php}}
+\subsubsection[{\$id}]{\setlength{\rightskip}{0pt plus 5cm}\$id = required\-\_\-param('id', P\-A\-R\-A\-M\-\_\-\-I\-N\-T)}}\label{index_8php_ae97941710d863131c700f069b109991e}
+
+
+Replace confeature with the name of your module and remove this line. 
+
+\hypertarget{index_8php_a96b34b1df0434e68adafe20938e2864a}{\index{index.\-php@{index.\-php}!\$table@{\$table}}
+\index{\$table@{\$table}!index.php@{index.\-php}}
+\subsubsection[{\$table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} (!\$confeatures=get\-\_\-all\-\_\-instances\-\_\-in\-\_\-course('confeature', \$course)) \$table = new html\-\_\-table()}}\label{index_8php_a96b34b1df0434e68adafe20938e2864a}
+\hypertarget{index_8php_a8157eb76abbafb202f62b1c82d099159}{\index{index.\-php@{index.\-php}!align@{align}}
+\index{align@{align}!index.php@{index.\-php}}
+\subsubsection[{align}]{\setlength{\rightskip}{0pt plus 5cm}\$table align = array('left', 'left', 'left')}}\label{index_8php_a8157eb76abbafb202f62b1c82d099159}
+\hypertarget{index_8php_a0799edd8facb2c34db7e8afb18dad21b}{\index{index.\-php@{index.\-php}!else@{else}}
+\index{else@{else}!index.php@{index.\-php}}
+\subsubsection[{else}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} (\$course-\/$>$format== 'weeks') else {\bf if} (\$course-\/$>$format== 'topics') else}}\label{index_8php_a0799edd8facb2c34db7e8afb18dad21b}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+\{
+    \hyperlink{index_8php_a96b34b1df0434e68adafe20938e2864a}{$table}->head  = array(get\_string(\textcolor{stringliteral}{'name'}))
+\end{DoxyCode}
+\hypertarget{index_8php_a1dfad6a7acd4569718f5bf04239e3e28}{\index{index.\-php@{index.\-php}!foreach@{foreach}}
+\index{foreach@{foreach}!index.php@{index.\-php}}
+\subsubsection[{foreach}]{\setlength{\rightskip}{0pt plus 5cm}foreach(\$confeatures as \$confeature)}}\label{index_8php_a1dfad6a7acd4569718f5bf04239e3e28}

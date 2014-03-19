@@ -1,0 +1,356 @@
+\hypertarget{lib_8php}{\section{confeature/lib.php File Reference}
+\label{lib_8php}\index{confeature/lib.\-php@{confeature/lib.\-php}}
+}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespacemod__confeature}{mod\-\_\-confeature}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lib_8php_a914ec3d597da510b074e005d2fa9bfb5}{confeature\-\_\-supports} (\$feature)
+\item 
+\hyperlink{lib_8php_a7e22c75c28ab3ae8b48c1d332f648fc5}{confeature\-\_\-add\-\_\-instance} (std\-Class \$confeature, \hyperlink{classmod__confeature__mod__form}{mod\-\_\-confeature\-\_\-mod\-\_\-form} \$mform=null)
+\item 
+\hyperlink{lib_8php_a55bc12394a95bb1e3e069ce5a6e79c8f}{confeature\-\_\-update\-\_\-instance} (std\-Class \$confeature, \hyperlink{classmod__confeature__mod__form}{mod\-\_\-confeature\-\_\-mod\-\_\-form} \$mform=null)
+\item 
+\hyperlink{lib_8php_ae40b9e515633066eb722f342cd2588cf}{confeature\-\_\-delete\-\_\-instance} (\$id)
+\item 
+\hyperlink{lib_8php_a98b21d4ffd15b658a6ee2ed024d1db10}{confeature\-\_\-user\-\_\-outline} (\$course, \$user, \$mod, \$confeature)
+\item 
+\hyperlink{lib_8php_a0836122ac8fe9d03b33b1b7cdddcfb27}{confeature\-\_\-user\-\_\-complete} (\$course, \$user, \$mod, \$confeature)
+\item 
+\hyperlink{lib_8php_ab6f05e521225e88204d51134a18f79f5}{confeature\-\_\-print\-\_\-recent\-\_\-activity} (\$course, \$viewfullnames, \$timestart)
+\item 
+\hyperlink{lib_8php_a78a53f498e070cf78b48c225781a283d}{confeature\-\_\-get\-\_\-recent\-\_\-mod\-\_\-activity} (\&\$activities, \&\$index, \$timestart, \$courseid, \$cmid, \$userid=0, \$groupid=0)
+\item 
+\hyperlink{lib_8php_a664d1922079dd6d16dd38c1b84cb9075}{confeature\-\_\-print\-\_\-recent\-\_\-mod\-\_\-activity} (\$activity, \$courseid, \$detail, \$modnames, \$viewfullnames)
+\item 
+\hyperlink{lib_8php_aef534dc463e45aa37218730f6ee5f4e1}{confeature\-\_\-cron} ()
+\item 
+\hyperlink{lib_8php_aff2ab18cf7940679e6a2b29d70d5038f}{confeature\-\_\-get\-\_\-extra\-\_\-capabilities} ()
+\item 
+\hyperlink{lib_8php_abfb70a04d0dbc52e73316ddb4e0929a2}{confeature\-\_\-get\-\_\-file\-\_\-areas} (\$course, \$cm, \$context)
+\item 
+\hyperlink{lib_8php_a6a0101f98ec5eb25b09138784487faaa}{confeature\-\_\-get\-\_\-file\-\_\-info} (\$browser, \$areas, \$course, \$cm, \$context, \$filearea, \$itemid, \$filepath, \$filename)
+\item 
+\hyperlink{lib_8php_a1be8c984df2150d9862b762c597c0728}{confeature\-\_\-pluginfile} (\$course, \$cm, \$context, \$filearea, array \$args, \$forcedownload, array \$options=array())
+\item 
+\hyperlink{lib_8php_a93de60bc5ca5f3fb9d14c8b92e0dfbac}{confeature\-\_\-extend\-\_\-navigation} (navigation\-\_\-node \$navref, stdclass \$course, stdclass \$module, cm\-\_\-info \$cm)
+\item 
+\hyperlink{lib_8php_ad4ed71218a8e13a4d21f57b89b2290ca}{confeature\-\_\-extend\-\_\-settings\-\_\-navigation} (settings\-\_\-navigation \$settingsnav, navigation\-\_\-node \$confeaturenode=null)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib_8php_a7e22c75c28ab3ae8b48c1d332f648fc5}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-add\-\_\-instance@{confeature\-\_\-add\-\_\-instance}}
+\index{confeature\-\_\-add\-\_\-instance@{confeature\-\_\-add\-\_\-instance}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-add\-\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-add\-\_\-instance (
+\begin{DoxyParamCaption}
+\item[{std\-Class}]{\$confeature, }
+\item[{{\bf mod\-\_\-confeature\-\_\-mod\-\_\-form}}]{\$mform = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_a7e22c75c28ab3ae8b48c1d332f648fc5}
+Saves a new instance of the confeature into the database
+
+Given an object containing all the necessary data, (defined by the form in \hyperlink{mod__form_8php}{mod\-\_\-form.\-php}) this function will create a new instance and return the id number of the new instance.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$confeature} & An object from the form in \hyperlink{mod__form_8php}{mod\-\_\-form.\-php} \\
+\hline
+\hyperlink{classmod__confeature__mod__form}{mod\-\_\-confeature\-\_\-mod\-\_\-form} & {\em \$mform} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The id of the newly inserted confeature record 
+\end{DoxyReturn}
+\hypertarget{lib_8php_aef534dc463e45aa37218730f6ee5f4e1}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-cron@{confeature\-\_\-cron}}
+\index{confeature\-\_\-cron@{confeature\-\_\-cron}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-cron}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-cron (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_aef534dc463e45aa37218730f6ee5f4e1}
+Function to be run periodically according to the moodle cron This function searches for things that need to be done, such as sending out mail, toggling flags etc ...
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Finish documenting this function \end{DoxyRefDesc}
+\hypertarget{lib_8php_ae40b9e515633066eb722f342cd2588cf}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-delete\-\_\-instance@{confeature\-\_\-delete\-\_\-instance}}
+\index{confeature\-\_\-delete\-\_\-instance@{confeature\-\_\-delete\-\_\-instance}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-delete\-\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-delete\-\_\-instance (
+\begin{DoxyParamCaption}
+\item[{}]{\$id}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_ae40b9e515633066eb722f342cd2588cf}
+Removes an instance of the confeature from the database
+
+Given an I\-D of an instance of this module, this function will permanently delete the instance and any data that depends on it.
+
+
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & Id of the module instance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean Success/\-Failure 
+\end{DoxyReturn}
+\hypertarget{lib_8php_a93de60bc5ca5f3fb9d14c8b92e0dfbac}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-extend\-\_\-navigation@{confeature\-\_\-extend\-\_\-navigation}}
+\index{confeature\-\_\-extend\-\_\-navigation@{confeature\-\_\-extend\-\_\-navigation}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-extend\-\_\-navigation}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-extend\-\_\-navigation (
+\begin{DoxyParamCaption}
+\item[{navigation\-\_\-node}]{\$navref, }
+\item[{stdclass}]{\$course, }
+\item[{stdclass}]{\$module, }
+\item[{cm\-\_\-info}]{\$cm}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_a93de60bc5ca5f3fb9d14c8b92e0dfbac}
+Extends the global navigation tree by adding confeature nodes if there is a relevant content
+
+This can be called by an A\-J\-A\-X request so do not rely on \$\-P\-A\-G\-E as it might not be set up properly.
+
+
+\begin{DoxyParams}[1]{Parameters}
+navigation\-\_\-node & {\em \$navref} & An object representing the navigation tree node of the confeature module instance \\
+\hline
+std\-Class & {\em \$course} & \\
+\hline
+std\-Class & {\em \$module} & \\
+\hline
+cm\-\_\-info & {\em \$cm} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{lib_8php_ad4ed71218a8e13a4d21f57b89b2290ca}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-extend\-\_\-settings\-\_\-navigation@{confeature\-\_\-extend\-\_\-settings\-\_\-navigation}}
+\index{confeature\-\_\-extend\-\_\-settings\-\_\-navigation@{confeature\-\_\-extend\-\_\-settings\-\_\-navigation}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-extend\-\_\-settings\-\_\-navigation}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-extend\-\_\-settings\-\_\-navigation (
+\begin{DoxyParamCaption}
+\item[{settings\-\_\-navigation}]{\$settingsnav, }
+\item[{navigation\-\_\-node}]{\$confeaturenode = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_ad4ed71218a8e13a4d21f57b89b2290ca}
+Extends the settings navigation with the confeature settings
+
+This function is called when the context for the page is a confeature module. This is not called by A\-J\-A\-X so it is safe to rely on the \$\-P\-A\-G\-E.
+
+
+\begin{DoxyParams}[1]{Parameters}
+settings\-\_\-navigation & {\em \$settingsnav} & \hyperlink{}{settings\-\_\-navigation} \\
+\hline
+navigation\-\_\-node & {\em \$confeaturenode} & \hyperlink{}{navigation\-\_\-node} \\
+\hline
+\end{DoxyParams}
+\hypertarget{lib_8php_aff2ab18cf7940679e6a2b29d70d5038f}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-get\-\_\-extra\-\_\-capabilities@{confeature\-\_\-get\-\_\-extra\-\_\-capabilities}}
+\index{confeature\-\_\-get\-\_\-extra\-\_\-capabilities@{confeature\-\_\-get\-\_\-extra\-\_\-capabilities}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-get\-\_\-extra\-\_\-capabilities}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-get\-\_\-extra\-\_\-capabilities (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_aff2ab18cf7940679e6a2b29d70d5038f}
+\hypertarget{lib_8php_abfb70a04d0dbc52e73316ddb4e0929a2}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-get\-\_\-file\-\_\-areas@{confeature\-\_\-get\-\_\-file\-\_\-areas}}
+\index{confeature\-\_\-get\-\_\-file\-\_\-areas@{confeature\-\_\-get\-\_\-file\-\_\-areas}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-get\-\_\-file\-\_\-areas}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-get\-\_\-file\-\_\-areas (
+\begin{DoxyParamCaption}
+\item[{}]{\$course, }
+\item[{}]{\$cm, }
+\item[{}]{\$context}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_abfb70a04d0dbc52e73316ddb4e0929a2}
+Returns the lists of all browsable file areas within the given module context
+
+The file area 'intro' for the activity introduction field is added automatically by \hyperlink{}{file\-\_\-browser\-::get\-\_\-file\-\_\-info\-\_\-context\-\_\-module()}
+
+
+\begin{DoxyParams}[1]{Parameters}
+std\-Class & {\em \$course} & \\
+\hline
+std\-Class & {\em \$cm} & \\
+\hline
+std\-Class & {\em \$context} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of \mbox{[}(string)filearea\mbox{]} =$>$ (string)description 
+\end{DoxyReturn}
+\hypertarget{lib_8php_a6a0101f98ec5eb25b09138784487faaa}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-get\-\_\-file\-\_\-info@{confeature\-\_\-get\-\_\-file\-\_\-info}}
+\index{confeature\-\_\-get\-\_\-file\-\_\-info@{confeature\-\_\-get\-\_\-file\-\_\-info}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-get\-\_\-file\-\_\-info}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-get\-\_\-file\-\_\-info (
+\begin{DoxyParamCaption}
+\item[{}]{\$browser, }
+\item[{}]{\$areas, }
+\item[{}]{\$course, }
+\item[{}]{\$cm, }
+\item[{}]{\$context, }
+\item[{}]{\$filearea, }
+\item[{}]{\$itemid, }
+\item[{}]{\$filepath, }
+\item[{}]{\$filename}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_a6a0101f98ec5eb25b09138784487faaa}
+\hypertarget{lib_8php_a78a53f498e070cf78b48c225781a283d}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-get\-\_\-recent\-\_\-mod\-\_\-activity@{confeature\-\_\-get\-\_\-recent\-\_\-mod\-\_\-activity}}
+\index{confeature\-\_\-get\-\_\-recent\-\_\-mod\-\_\-activity@{confeature\-\_\-get\-\_\-recent\-\_\-mod\-\_\-activity}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-get\-\_\-recent\-\_\-mod\-\_\-activity}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-get\-\_\-recent\-\_\-mod\-\_\-activity (
+\begin{DoxyParamCaption}
+\item[{\&}]{\$activities, }
+\item[{\&}]{\$index, }
+\item[{}]{\$timestart, }
+\item[{}]{\$courseid, }
+\item[{}]{\$cmid, }
+\item[{}]{\$userid = {\ttfamily 0}, }
+\item[{}]{\$groupid = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_a78a53f498e070cf78b48c225781a283d}
+Prepares the recent activity data
+
+This callback function is supposed to populate the passed array with custom activity records. These records are then rendered into H\-T\-M\-L via \hyperlink{lib_8php_a664d1922079dd6d16dd38c1b84cb9075}{confeature\-\_\-print\-\_\-recent\-\_\-mod\-\_\-activity()}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$activities} & sequentially indexed array of objects with the 'cmid' property \\
+\hline
+int & {\em \$index} & the index in the \$activities to use for the next record \\
+\hline
+int & {\em \$timestart} & append activity since this time \\
+\hline
+int & {\em \$courseid} & the id of the course we produce the report for \\
+\hline
+int & {\em \$cmid} & course module id \\
+\hline
+int & {\em \$userid} & check for a particular user's activity only, defaults to 0 (all users) \\
+\hline
+int & {\em \$groupid} & check for a particular group's activity only, defaults to 0 (all groups) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void adds items into \$activities and increases \$index 
+\end{DoxyReturn}
+\hypertarget{lib_8php_a1be8c984df2150d9862b762c597c0728}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-pluginfile@{confeature\-\_\-pluginfile}}
+\index{confeature\-\_\-pluginfile@{confeature\-\_\-pluginfile}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-pluginfile}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-pluginfile (
+\begin{DoxyParamCaption}
+\item[{}]{\$course, }
+\item[{}]{\$cm, }
+\item[{}]{\$context, }
+\item[{}]{\$filearea, }
+\item[{array}]{\$args, }
+\item[{}]{\$forcedownload, }
+\item[{array}]{\$options = {\ttfamily array()}}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_a1be8c984df2150d9862b762c597c0728}
+\hypertarget{lib_8php_ab6f05e521225e88204d51134a18f79f5}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-print\-\_\-recent\-\_\-activity@{confeature\-\_\-print\-\_\-recent\-\_\-activity}}
+\index{confeature\-\_\-print\-\_\-recent\-\_\-activity@{confeature\-\_\-print\-\_\-recent\-\_\-activity}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-print\-\_\-recent\-\_\-activity}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-print\-\_\-recent\-\_\-activity (
+\begin{DoxyParamCaption}
+\item[{}]{\$course, }
+\item[{}]{\$viewfullnames, }
+\item[{}]{\$timestart}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_ab6f05e521225e88204d51134a18f79f5}
+Given a course and a time, this module should find recent activity that has occurred in confeature activities and print it out. Return true if there was output, or false is there was none.
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\hypertarget{lib_8php_a664d1922079dd6d16dd38c1b84cb9075}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-print\-\_\-recent\-\_\-mod\-\_\-activity@{confeature\-\_\-print\-\_\-recent\-\_\-mod\-\_\-activity}}
+\index{confeature\-\_\-print\-\_\-recent\-\_\-mod\-\_\-activity@{confeature\-\_\-print\-\_\-recent\-\_\-mod\-\_\-activity}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-print\-\_\-recent\-\_\-mod\-\_\-activity}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-print\-\_\-recent\-\_\-mod\-\_\-activity (
+\begin{DoxyParamCaption}
+\item[{}]{\$activity, }
+\item[{}]{\$courseid, }
+\item[{}]{\$detail, }
+\item[{}]{\$modnames, }
+\item[{}]{\$viewfullnames}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_a664d1922079dd6d16dd38c1b84cb9075}
+Prints single activity item prepared by \{\begin{DoxySeeAlso}{See Also}
+\hyperlink{lib_8php_a78a53f498e070cf78b48c225781a283d}{confeature\-\_\-get\-\_\-recent\-\_\-mod\-\_\-activity()}\}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{lib_8php_a914ec3d597da510b074e005d2fa9bfb5}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-supports@{confeature\-\_\-supports}}
+\index{confeature\-\_\-supports@{confeature\-\_\-supports}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-supports}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-supports (
+\begin{DoxyParamCaption}
+\item[{}]{\$feature}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_a914ec3d597da510b074e005d2fa9bfb5}
+example constant Returns the information on whether the module supports a feature
+
+\begin{DoxySeeAlso}{See Also}
+plugin\-\_\-supports() in lib/moodlelib.\-php 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$feature} & F\-E\-A\-T\-U\-R\-E\-\_\-xx constant for requested feature \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed true if the feature is supported, null if unknown 
+\end{DoxyReturn}
+\hypertarget{lib_8php_a55bc12394a95bb1e3e069ce5a6e79c8f}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-update\-\_\-instance@{confeature\-\_\-update\-\_\-instance}}
+\index{confeature\-\_\-update\-\_\-instance@{confeature\-\_\-update\-\_\-instance}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-update\-\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-update\-\_\-instance (
+\begin{DoxyParamCaption}
+\item[{std\-Class}]{\$confeature, }
+\item[{{\bf mod\-\_\-confeature\-\_\-mod\-\_\-form}}]{\$mform = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_a55bc12394a95bb1e3e069ce5a6e79c8f}
+Updates an instance of the confeature in the database
+
+Given an object containing all the necessary data, (defined by the form in \hyperlink{mod__form_8php}{mod\-\_\-form.\-php}) this function will update an existing instance with new data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+object & {\em \$confeature} & An object from the form in \hyperlink{mod__form_8php}{mod\-\_\-form.\-php} \\
+\hline
+\hyperlink{classmod__confeature__mod__form}{mod\-\_\-confeature\-\_\-mod\-\_\-form} & {\em \$mform} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean Success/\-Fail 
+\end{DoxyReturn}
+\hypertarget{lib_8php_a0836122ac8fe9d03b33b1b7cdddcfb27}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-user\-\_\-complete@{confeature\-\_\-user\-\_\-complete}}
+\index{confeature\-\_\-user\-\_\-complete@{confeature\-\_\-user\-\_\-complete}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-user\-\_\-complete}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-user\-\_\-complete (
+\begin{DoxyParamCaption}
+\item[{}]{\$course, }
+\item[{}]{\$user, }
+\item[{}]{\$mod, }
+\item[{}]{\$confeature}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_a0836122ac8fe9d03b33b1b7cdddcfb27}
+Prints a detailed representation of what a user has done with a given particular instance of this module, for user activity reports.
+
+
+\begin{DoxyParams}[1]{Parameters}
+std\-Class & {\em \$course} & the current course record \\
+\hline
+std\-Class & {\em \$user} & the record of the user we are generating report for \\
+\hline
+cm\-\_\-info & {\em \$mod} & course module info \\
+\hline
+std\-Class & {\em \$confeature} & the module instance record \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void, is supposed to echp directly 
+\end{DoxyReturn}
+\hypertarget{lib_8php_a98b21d4ffd15b658a6ee2ed024d1db10}{\index{lib.\-php@{lib.\-php}!confeature\-\_\-user\-\_\-outline@{confeature\-\_\-user\-\_\-outline}}
+\index{confeature\-\_\-user\-\_\-outline@{confeature\-\_\-user\-\_\-outline}!lib.php@{lib.\-php}}
+\subsubsection[{confeature\-\_\-user\-\_\-outline}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-user\-\_\-outline (
+\begin{DoxyParamCaption}
+\item[{}]{\$course, }
+\item[{}]{\$user, }
+\item[{}]{\$mod, }
+\item[{}]{\$confeature}
+\end{DoxyParamCaption}
+)}}\label{lib_8php_a98b21d4ffd15b658a6ee2ed024d1db10}
+Returns a small object with summary information about what a user has done with a given particular instance of this module Used for user activity reports. \$return-\/$>$time = the time they did it \$return-\/$>$info = a short text description
+
+\begin{DoxyReturn}{Returns}
+std\-Class$\vert$null 
+\end{DoxyReturn}
