@@ -74,13 +74,13 @@ function confeature_add_instance(stdClass $confeature, mod_confeature_mod_form $
     $confeature->timecreated = time();
 	//var_dump ($mform);
     //Login
-	if(!confeature_api_login()) return -1;
+	confeature_api_login();
 	
 	//Create conference
-	echo 'Created';
+	confeature_api_create();
 	
 	//Logout
-	if(!confeature_api_logout()) return -1;
+	confeature_api_logout();
 	
     return $DB->insert_record('confeature', $confeature);
 }

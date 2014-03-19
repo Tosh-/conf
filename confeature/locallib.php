@@ -29,7 +29,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 require_once($CFG->dirroot.'/mod/confeature/config.php');
-
+define("COOKIE_FILE", "/home/confeature/website/mod/confeature/cookie.txt");
 /**
  * Does something really useful with the passed things
  *
@@ -49,9 +49,12 @@ function confeature_api_login() {
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
 													'Accept: application/json',
-													'Content-Length: '.strlen("username=alex&password=alex")
+													'Content-Length: '.strlen("username=".constant('CONFEATURE_API_USERNAME')."&password=".constant('CONFEATURE_API_PASSWORD'))
 												)
 				);
+	curl_setopt($curl, CURLOPT_COOKIESESSION, TRUE);
+	curl_setopt ($curl, CURLOPT_COOKIEJAR, COOKIE_FILE); 
+	//curl_setopt ($curl, CURLOPT_COOKIEFILE, COOKIE_FILE);
 	
 	 $json = curl_exec($curl);	
 	 curl_close($curl);
@@ -66,11 +69,10 @@ function confeature_api_login() {
 function confeature_api_logout() {
 	$url = constant('CONFEATURE_API_URL').'/user/logout';
 	// CURL
-	$curl = curl_init();
+	//$curl = curl_init();
 	curl_setopt($curl, CURLOPT_POST, 1);
 	
 	
-	if ($params)
 		curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -78,6 +80,8 @@ function confeature_api_logout() {
 														'Accept: application/json'
 													)
 					);
+		//curl_setopt ($ch, CURLOPT_COOKIEJAR, COOKIE_FILE); 
+		curl_setopt ($ch, CURLOPT_COOKIEFILE, COOKIE_FILE);			
 		
 	 $json = curl_exec($curl);	
 	 curl_close($curl);
@@ -90,8 +94,8 @@ function confeature_api_logout() {
 }
 
 function confeature_api_create() {
-	/*$url = constant('CONFEATURE_API_URL').'/conference/create'; //TODO Modify with real path
-	$data = array('title' => 'My title',//TODO Modify with parameters
+	$url = constant('CONFEATURE_API_URL').'/conference/create'; //TODO Modify with real path
+	/*$data = array('title' => 'My title',//TODO Modify with parameters
 				  'description' => 'My description',
 				  'maxSpeakers' => '5',
 				  'maxViewers' => '100',
@@ -120,13 +124,38 @@ function confeature_api_create() {
 	$curl = curl_init();
 	curl_setopt($curl, CURLOPT_POST, 1);
 	
-	curl_setopt($curl, CURLOPT_POSTFIELDS,"username=".constant('CONFEATURE_API_USERNAME')."&password=".constant('CONFEATURE_API_PASSWORD'));
+	curl_setopt($curl, CURLOPT_POSTFIELDS,"title=Title&".
+											"description=Description&".
+											"maxSpeakers=5&".
+											"maxViewers=100&".
+											"maxResolution=1080&".
+											"timerToggle=0&".
+											"inactivityToggle=1&".
+											"endingHourToggle=0&".
+											"noSpeakersToggle=0&".
+											"timerDuration=120&".
+											"inactivityDuration=20&".
+											"privacy=public&".
+											"endingHour=2014-12-31 00:00:00");
 	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
 	curl_setopt($curl, CURLOPT_URL, $url);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt ($curl, CURLOPT_COOKIEFILE, COOKIE_FILE);	
 	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
 													'Accept: application/json',
-													'Content-Length: '.strlen("username=alex&password=alex")
+													'Content-Length: '.strlen("title=Title&".
+																				"description=Description&".
+																				"maxSpeakers=5&".
+																				"maxViewers=100&".
+																				"maxResolution=1080&".
+																				"timerToggle=0&".
+																				"inactivityToggle=1&".
+																				"endingHourToggle=0&".
+																				"noSpeakersToggle=0&".
+																				"timerDuration=120&".
+																				"inactivityDuration=20&".
+																				"privacy=public&".
+																				"endingHour=2014-12-31 00:00:00")
 												)
 				);
 	
