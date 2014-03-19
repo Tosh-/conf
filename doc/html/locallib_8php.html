@@ -105,34 +105,40 @@ $(document).ready(function(){initNavTree('locallib_8php.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">locallib.php File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Internal library of functions for Confeature Moodle.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacemod__confeature"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__confeature.html">mod_confeature</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0034931acefd021a0147a0216bc0a6a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="locallib_8php.html#a0034931acefd021a0147a0216bc0a6a8">confeature_api_login</a> ()</td></tr>
+<tr class="memdesc:a0034931acefd021a0147a0216bc0a6a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Login function to connect to Confeature API.  <a href="#a0034931acefd021a0147a0216bc0a6a8">More...</a><br/></td></tr>
 <tr class="separator:a0034931acefd021a0147a0216bc0a6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7acfa5bd6b3fa64681a044cfa5360652"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="locallib_8php.html#a7acfa5bd6b3fa64681a044cfa5360652">confeature_api_logout</a> ()</td></tr>
+<tr class="memdesc:a7acfa5bd6b3fa64681a044cfa5360652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logout function to disconnect from Confeature API.  <a href="#a7acfa5bd6b3fa64681a044cfa5360652">More...</a><br/></td></tr>
 <tr class="separator:a7acfa5bd6b3fa64681a044cfa5360652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dc79dc02ce145c489edd4734a207278"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="locallib_8php.html#a7dc79dc02ce145c489edd4734a207278">confeature_api_create</a> ()</td></tr>
+<tr class="memdesc:a7dc79dc02ce145c489edd4734a207278"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a conference via Confeature API.  <a href="#a7dc79dc02ce145c489edd4734a207278">More...</a><br/></td></tr>
 <tr class="separator:a7dc79dc02ce145c489edd4734a207278"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a30f006ca5997500742610df15bccc1a2"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="locallib_8php.html#a30f006ca5997500742610df15bccc1a2">COOKIE_FILE</a> &quot;/home/confeature/website/mod/confeature/cookie.txt&quot;</td></tr>
+<tr class="memitem:a30f006ca5997500742610df15bccc1a2"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="locallib_8php.html#a30f006ca5997500742610df15bccc1a2">COOKIE_FILE</a> $CFG-&gt;dirroot.'/mod/confeature/cookie.txt'</td></tr>
+<tr class="memdesc:a30f006ca5997500742610df15bccc1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant defining the cookie file to be used.  <a href="#a30f006ca5997500742610df15bccc1a2">More...</a><br/></td></tr>
 <tr class="separator:a30f006ca5997500742610df15bccc1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Internal library of functions for Confeature Moodle. </p>
+<p>All the Confeature API specific functions are implemented here. For more details on API see API specific documentation. </p>
+<dl class="section author"><dt>Author</dt><dd>Gautier Gramage </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Never include this file from your <a class="el" href="lib_8php.html">lib.php</a>!</dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a7dc79dc02ce145c489edd4734a207278"></a>
 <div class="memitem">
 <div class="memproto">
@@ -145,6 +151,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Create a conference via Confeature API. </p>
+<p>It creates a conference with the parameters of the formulary<br/>
+ Use cookies in cookie.txt </p>
+<dl class="section return"><dt>Returns</dt><dd>API <em>response</em> in an array </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>use formular to change values in the POSTFIELDS </dd></dl>
 
 </div>
 </div>
@@ -160,14 +172,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Does something really useful with the passed things</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">array</td><td class="paramname">$things</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>object </dd></dl>
+
+<p>Login function to connect to Confeature API. </p>
+<p>Store cookies in cookie.txt to keep session logged.<br/>
+ Use connection details stored in <a class="el" href="config_8php.html" title="Definitions of API logs. ">config.php</a> </p>
+<dl class="section return"><dt>Returns</dt><dd>boolean Connection success (<em>true</em>) or failure (<em>false</em>) </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>return conditions </dd></dl>
 
 </div>
 </div>
@@ -184,6 +194,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Logout function to disconnect from Confeature API. </p>
+<p>Use cookies in cookie.txt. </p>
+<dl class="section return"><dt>Returns</dt><dd>boolean Disconnection success (<em>true</em>) or failure (<em>false</em>) </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>return conditions </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -192,10 +207,12 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const COOKIE_FILE &quot;/home/confeature/website/mod/confeature/cookie.txt&quot;</td>
+          <td class="memname">const COOKIE_FILE $CFG-&gt;dirroot.'/mod/confeature/cookie.txt'</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constant defining the cookie file to be used. </p>
 
 </div>
 </div>
@@ -205,7 +222,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_73a9bd5ecae5111065e6eeb4021639f1.html">confeature</a></li><li class="navelem"><a class="el" href="locallib_8php.html">locallib.php</a></li>
-    <li class="footer">Generated on Wed Mar 19 2014 13:58:46 for Confeature Moodle Documentation by
+    <li class="footer">Generated on Wed Mar 19 2014 18:04:16 for Confeature Moodle Documentation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

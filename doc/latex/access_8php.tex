@@ -1,19 +1,37 @@
 \hypertarget{access_8php}{\section{confeature/db/access.php File Reference}
 \label{access_8php}\index{confeature/db/access.\-php@{confeature/db/access.\-php}}
 }
-\subsection*{Namespaces}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{namespacemod__confeature}{mod\-\_\-confeature}
-\end{DoxyCompactItemize}
+
+
+Capability definitions for the confeature module.  
+
+
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{access_8php_a3bd1a55d998861e02e56c127f4b46c94}{\$capabilities}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Array of Confeature capabilities. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Capability definitions for the confeature module. The capabilities are loaded into the database table when the module is installed or updated. Whenever the capability definitions are updated, the module version number should be bumped up.
+
+The system has four possible values for a capability\-: C\-A\-P\-\_\-\-A\-L\-L\-O\-W, C\-A\-P\-\_\-\-P\-R\-E\-V\-E\-N\-T, C\-A\-P\-\_\-\-P\-R\-O\-H\-I\-B\-I\-T, and inherit (not set).
+
+The variable name for the capability definitions array is \$capabilities 
 
 \subsection{Variable Documentation}
 \hypertarget{access_8php_a3bd1a55d998861e02e56c127f4b46c94}{\index{access.\-php@{access.\-php}!\$capabilities@{\$capabilities}}
 \index{\$capabilities@{\$capabilities}!access.php@{access.\-php}}
 \subsubsection[{\$capabilities}]{\setlength{\rightskip}{0pt plus 5cm}\$capabilities}}\label{access_8php_a3bd1a55d998861e02e56c127f4b46c94}
+
+
+Array of Confeature capabilities. 
+
+Confeature module uses 3 capabilities \-:\par
+ 
+\begin{DoxyItemize}
+\item mod/confeature\-:addinstance \-: describe who is allowed to add an instance and so to create a conference. 
+\item mod/confeature\-:stream \-: describe who is allowed to stream in a conference. 
+\item mod/confeature\-:watch \-: describe who is allowed to watch a conference. 
+\end{DoxyItemize}

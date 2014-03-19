@@ -1,25 +1,33 @@
 \hypertarget{locallib_8php}{\section{confeature/locallib.php File Reference}
 \label{locallib_8php}\index{confeature/locallib.\-php@{confeature/locallib.\-php}}
 }
-\subsection*{Namespaces}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{namespacemod__confeature}{mod\-\_\-confeature}
-\end{DoxyCompactItemize}
+
+
+Internal library of functions for Confeature Moodle.  
+
+
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{locallib_8php_a0034931acefd021a0147a0216bc0a6a8}{confeature\-\_\-api\-\_\-login} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Login function to connect to Confeature A\-P\-I. \end{DoxyCompactList}\item 
 \hyperlink{locallib_8php_a7acfa5bd6b3fa64681a044cfa5360652}{confeature\-\_\-api\-\_\-logout} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Logout function to disconnect from Confeature A\-P\-I. \end{DoxyCompactList}\item 
 \hyperlink{locallib_8php_a7dc79dc02ce145c489edd4734a207278}{confeature\-\_\-api\-\_\-create} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Create a conference via Confeature A\-P\-I. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const \hyperlink{locallib_8php_a30f006ca5997500742610df15bccc1a2}{C\-O\-O\-K\-I\-E\-\_\-\-F\-I\-L\-E} \char`\"{}/home/confeature/website/mod/confeature/cookie.\-txt\char`\"{}
-\end{DoxyCompactItemize}
+const \hyperlink{locallib_8php_a30f006ca5997500742610df15bccc1a2}{C\-O\-O\-K\-I\-E\-\_\-\-F\-I\-L\-E} \$C\-F\-G-\/$>$dirroot.'/mod/confeature/cookie.\-txt'
+\begin{DoxyCompactList}\small\item\em Constant defining the cookie file to be used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Internal library of functions for Confeature Moodle. All the Confeature A\-P\-I specific functions are implemented here. For more details on A\-P\-I see A\-P\-I specific documentation. \begin{DoxyAuthor}{Author}
+Gautier Gramage 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Never include this file from your \hyperlink{lib_8php}{lib.\-php}!\end{DoxyRefDesc}
 
 
 \subsection{Function Documentation}
@@ -30,6 +38,16 @@ const \hyperlink{locallib_8php_a30f006ca5997500742610df15bccc1a2}{C\-O\-O\-K\-I\
 {}
 \end{DoxyParamCaption}
 )}}\label{locallib_8php_a7dc79dc02ce145c489edd4734a207278}
+
+
+Create a conference via Confeature A\-P\-I. 
+
+It creates a conference with the parameters of the formulary\par
+ Use cookies in cookie.\-txt \begin{DoxyReturn}{Returns}
+A\-P\-I {\itshape response} in an array 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000005}{Todo}]use formular to change values in the P\-O\-S\-T\-F\-I\-E\-L\-D\-S \end{DoxyRefDesc}
 \hypertarget{locallib_8php_a0034931acefd021a0147a0216bc0a6a8}{\index{locallib.\-php@{locallib.\-php}!confeature\-\_\-api\-\_\-login@{confeature\-\_\-api\-\_\-login}}
 \index{confeature\-\_\-api\-\_\-login@{confeature\-\_\-api\-\_\-login}!locallib.php@{locallib.\-php}}
 \subsubsection[{confeature\-\_\-api\-\_\-login}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-api\-\_\-login (
@@ -37,16 +55,16 @@ const \hyperlink{locallib_8php_a30f006ca5997500742610df15bccc1a2}{C\-O\-O\-K\-I\
 {}
 \end{DoxyParamCaption}
 )}}\label{locallib_8php_a0034931acefd021a0147a0216bc0a6a8}
-Does something really useful with the passed things
 
 
-\begin{DoxyParams}[1]{Parameters}
-array & {\em \$things} & \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-object 
+Login function to connect to Confeature A\-P\-I. 
+
+Store cookies in cookie.\-txt to keep session logged.\par
+ Use connection details stored in \hyperlink{config_8php}{config.\-php} \begin{DoxyReturn}{Returns}
+boolean Connection success ({\itshape true}) or failure ({\itshape false}) 
 \end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]return conditions \end{DoxyRefDesc}
 \hypertarget{locallib_8php_a7acfa5bd6b3fa64681a044cfa5360652}{\index{locallib.\-php@{locallib.\-php}!confeature\-\_\-api\-\_\-logout@{confeature\-\_\-api\-\_\-logout}}
 \index{confeature\-\_\-api\-\_\-logout@{confeature\-\_\-api\-\_\-logout}!locallib.php@{locallib.\-php}}
 \subsubsection[{confeature\-\_\-api\-\_\-logout}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-api\-\_\-logout (
@@ -56,7 +74,20 @@ object
 )}}\label{locallib_8php_a7acfa5bd6b3fa64681a044cfa5360652}
 
 
+Logout function to disconnect from Confeature A\-P\-I. 
+
+Use cookies in cookie.\-txt. \begin{DoxyReturn}{Returns}
+boolean Disconnection success ({\itshape true}) or failure ({\itshape false}) 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]return conditions \end{DoxyRefDesc}
+
+
 \subsection{Variable Documentation}
 \hypertarget{locallib_8php_a30f006ca5997500742610df15bccc1a2}{\index{locallib.\-php@{locallib.\-php}!C\-O\-O\-K\-I\-E\-\_\-\-F\-I\-L\-E@{C\-O\-O\-K\-I\-E\-\_\-\-F\-I\-L\-E}}
 \index{C\-O\-O\-K\-I\-E\-\_\-\-F\-I\-L\-E@{C\-O\-O\-K\-I\-E\-\_\-\-F\-I\-L\-E}!locallib.php@{locallib.\-php}}
-\subsubsection[{C\-O\-O\-K\-I\-E\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const C\-O\-O\-K\-I\-E\-\_\-\-F\-I\-L\-E \char`\"{}/home/confeature/website/mod/confeature/cookie.\-txt\char`\"{}}}\label{locallib_8php_a30f006ca5997500742610df15bccc1a2}
+\subsubsection[{C\-O\-O\-K\-I\-E\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}const C\-O\-O\-K\-I\-E\-\_\-\-F\-I\-L\-E \$C\-F\-G-\/$>$dirroot.'/mod/confeature/cookie.\-txt'}}\label{locallib_8php_a30f006ca5997500742610df15bccc1a2}
+
+
+Constant defining the cookie file to be used. 
+
