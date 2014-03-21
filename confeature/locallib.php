@@ -46,7 +46,7 @@ function confeature_api_login() {
 	 $json = curl_exec($curl);	
 	 curl_close($curl);
 	var_dump($json);
-	 $result = json_decode($json);
+	 $result = json_decode($json, true);
 	var_dump($result);
 	
 	
@@ -61,7 +61,7 @@ function confeature_api_login() {
 function confeature_api_logout() {
 	$url = constant('CONFEATURE_API_URL').'/user/logout';
 	// CURL
-	//$curl = curl_init();
+	$curl = curl_init();
 	curl_setopt($curl, CURLOPT_POST, 1);
 	
 	
@@ -77,7 +77,7 @@ function confeature_api_logout() {
 	 $json = curl_exec($curl);	
 	 curl_close($curl);
 	var_dump($json);
-	 $result = json_decode($json);
+	 $result = json_decode($json, true);
 	var_dump($result);
 	
 	
@@ -135,7 +135,94 @@ function confeature_api_create() {
 	 $json = curl_exec($curl);	
 	 curl_close($curl);
 	var_dump($json);
-	 $result = json_decode($json);
+	 $result = json_decode($json, true);
 	var_dump($result);
-	return true;
+	return $result;
+}
+/**
+ * \brief Update a conference via Confeature API
+ * \details It updates a conference with the parameters of the formulary<br />
+ * Use cookies in cookie.txt
+ * \return API \a response in an array
+ * \todo use formular to change values in the POSTFIELDS
+ */
+function confeature_api_update(int $id) {
+	$url = constant('CONFEATURE_API_URL').'/conference/edit/'.$id; //TODO Modify with real path
+	// CURL
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_POST, 1);
+	
+	curl_setopt($curl, CURLOPT_POSTFIELDS,"title=Title&".
+											"description=Description&".
+											"maxSpeakers=5&".
+											"maxViewers=100&".
+											"maxResolution=1080&".
+											"timerToggle=0&".
+											"inactivityToggle=1&".
+											"endingHourToggle=0&".
+											"noSpeakersToggle=0&".
+											"timerDuration=120&".
+											"inactivityDuration=20&".
+											"privacy=public&".
+											"endingHour=2014-12-31 00:00:00");
+	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($curl, CURLOPT_URL, $url);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt ($curl, CURLOPT_COOKIEFILE, COOKIE_FILE);	
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+													'Accept: application/json',
+													'Content-Length: '.strlen("title=Title&".
+																				"description=Description&".
+																				"maxSpeakers=5&".
+																				"maxViewers=100&".
+																				"maxResolution=1080&".
+																				"timerToggle=0&".
+																				"inactivityToggle=1&".
+																				"endingHourToggle=0&".
+																				"noSpeakersToggle=0&".
+																				"timerDuration=120&".
+																				"inactivityDuration=20&".
+																				"privacy=public&".
+																				"endingHour=2014-12-31 00:00:00")
+												)
+				);
+	
+	 $json = curl_exec($curl);	
+	 curl_close($curl);
+	var_dump($json);
+	 $result = json_decode($json, true);
+	var_dump($result);
+	return $result;
+}
+
+/**
+ * \brief Delete a conference via Confeature API
+ * \details Use cookies in cookie.txt
+ * \return API \a response in an array
+ * 
+ */
+function confeature_api_delete(int $id) {
+	$url = constant('CONFEATURE_API_URL').'/conference/delete/'.$id;
+	// CURL
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_POST, 1);
+	
+	
+		curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+		curl_setopt($curl, CURLOPT_URL, $url);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+														'Accept: application/json'
+													)
+					);
+		curl_setopt ($ch, CURLOPT_COOKIEFILE, COOKIE_FILE);	//open cookie in read only mode	
+		
+	 $json = curl_exec($curl);	
+	 curl_close($curl);
+	var_dump($json);
+	 $result = json_decode($json, true);
+	var_dump($result);
+	
+	
+	return $result;
 }

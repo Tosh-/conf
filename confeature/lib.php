@@ -72,13 +72,17 @@ function confeature_add_instance(stdClass $confeature, mod_confeature_mod_form $
     global $DB;
 
     $confeature->timecreated = time();
-	//var_dump ($mform);
     //Login
 	confeature_api_login();
 	
 	//Create conference
-	confeature_api_create();
-	
+	$r=array();
+	$r=confeature_api_create();
+	if($r!=false){
+		$confeature->confid=$r["id"];
+		$confeature->streampass = $r["StreamPass"];
+		$confeature->viewpass = $r["ViewPass"];
+	}
 	//Logout
 	confeature_api_logout();
 	
@@ -102,7 +106,14 @@ function confeature_update_instance(stdClass $confeature, mod_confeature_mod_for
     $confeature->timemodified = time();
     $confeature->id = $confeature->instance;
 
-    # You may have to add extra stuff in here #
+    //Login
+	confeature_api_login();
+	
+	//Update conference
+	confeature_api_update();
+	
+	//Logout
+	confeature_api_logout();
 
     return $DB->update_record('confeature', $confeature);
 }
@@ -116,6 +127,7 @@ function confeature_update_instance(stdClass $confeature, mod_confeature_mod_for
  *
  * @param int $id Id of the module instance
  * @return boolean Success/Failure
+ * \todo read from DB to get conf id
  */
 function confeature_delete_instance($id) {
     global $DB;
@@ -124,7 +136,14 @@ function confeature_delete_instance($id) {
         return false;
     }
 
-    # Delete any dependent records here #
+    //Login
+	confeature_api_login();
+	
+	//Update conference
+	//confeature_api_delete();
+	
+	//Logout
+	confeature_api_logout();
 
     $DB->delete_records('confeature', array('id' => $confeature->id));
 
