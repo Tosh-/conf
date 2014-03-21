@@ -1,50 +1,16 @@
 \hypertarget{view_8php}{\section{confeature/view.php File Reference}
 \label{view_8php}\index{confeature/view.\-php@{confeature/view.\-php}}
 }
-\subsection*{Namespaces}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{namespacemod__confeature}{mod\-\_\-confeature}
-\end{DoxyCompactItemize}
-\subsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{view_8php_ae97941710d863131c700f069b109991e}{\$id} = optional\-\_\-param('id', 0, P\-A\-R\-A\-M\-\_\-\-I\-N\-T)
-\begin{DoxyCompactList}\small\item\em (Replace confeature with the name of your module and remove this line) \end{DoxyCompactList}\item 
-\hyperlink{view_8php_aa5fae90470d460a65d5211ec08e6b05c}{\$n} = optional\-\_\-param('n', 0, P\-A\-R\-A\-M\-\_\-\-I\-N\-T)
-\item 
-\hyperlink{view_8php_abf65f0046bca4eaf168cd62bab83f411}{if}(\$id) elseif(\$n) \hyperlink{view_8php_a0e55d2fc7d7599dbe8a6ed40e67f653b}{else}
-\item 
-\hyperlink{view_8php_ae05dedb802ada0155efdece2044fed64}{\$context} = context\-\_\-module\-::instance(\$cm-\/$>$id)
-\item 
-if(has\-\_\-capability('mod/confeature\-:createconference', \\*
-\$context)) if(has\-\_\-capability('mod/confeature\-:stream', \\*
-\$context)) \hyperlink{view_8php_abf65f0046bca4eaf168cd62bab83f411}{if} (has\-\_\-capability('mod/confeature\-:watch', \$context))
-\end{DoxyCompactItemize}
 
 
-\subsection{Variable Documentation}
-\hypertarget{view_8php_ae05dedb802ada0155efdece2044fed64}{\index{view.\-php@{view.\-php}!\$context@{\$context}}
-\index{\$context@{\$context}!view.php@{view.\-php}}
-\subsubsection[{\$context}]{\setlength{\rightskip}{0pt plus 5cm}\$context = context\-\_\-module\-::instance(\$cm-\/$>$id)}}\label{view_8php_ae05dedb802ada0155efdece2044fed64}
-\hypertarget{view_8php_ae97941710d863131c700f069b109991e}{\index{view.\-php@{view.\-php}!\$id@{\$id}}
-\index{\$id@{\$id}!view.php@{view.\-php}}
-\subsubsection[{\$id}]{\setlength{\rightskip}{0pt plus 5cm}\$id = optional\-\_\-param('id', 0, P\-A\-R\-A\-M\-\_\-\-I\-N\-T)}}\label{view_8php_ae97941710d863131c700f069b109991e}
+Main view of an instance of Confeature.  
 
 
-(Replace confeature with the name of your module and remove this line) 
 
-\hypertarget{view_8php_aa5fae90470d460a65d5211ec08e6b05c}{\index{view.\-php@{view.\-php}!\$n@{\$n}}
-\index{\$n@{\$n}!view.php@{view.\-php}}
-\subsubsection[{\$n}]{\setlength{\rightskip}{0pt plus 5cm}\$n = optional\-\_\-param('n', 0, P\-A\-R\-A\-M\-\_\-\-I\-N\-T)}}\label{view_8php_aa5fae90470d460a65d5211ec08e6b05c}
-\hypertarget{view_8php_a0e55d2fc7d7599dbe8a6ed40e67f653b}{\index{view.\-php@{view.\-php}!else@{else}}
-\index{else@{else}!view.php@{view.\-php}}
-\subsubsection[{else}]{\setlength{\rightskip}{0pt plus 5cm}{\bf if} (\$id) elseif (\$n) else}}\label{view_8php_a0e55d2fc7d7599dbe8a6ed40e67f653b}
-{\bfseries Initial value\-:}
-\begin{DoxyCode}
-\{
-    error(\textcolor{stringliteral}{'You must specify a course\_module ID or an instance ID'})
-\end{DoxyCode}
-\hypertarget{view_8php_abf65f0046bca4eaf168cd62bab83f411}{\index{view.\-php@{view.\-php}!if@{if}}
-\index{if@{if}!view.php@{view.\-php}}
-\subsubsection[{if}]{\setlength{\rightskip}{0pt plus 5cm}if (has\-\_\-capability('mod/confeature\-:createconference', \$context)) if (has\-\_\-capability('mod/confeature\-:stream', \$context)) if(has\-\_\-capability('mod/confeature\-:watch', \$context))}}\label{view_8php_abf65f0046bca4eaf168cd62bab83f411}
+
+\subsection{Detailed Description}
+Main view of an instance of Confeature. You can use capabilities to display specific code. \begin{DoxyAuthor}{Author}
+Gautier Gramage 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000009}{Todo}]Integrate main J\-S \end{DoxyRefDesc}

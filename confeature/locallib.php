@@ -143,6 +143,7 @@ function confeature_api_create() {
  * \brief Update a conference via Confeature API
  * \details It updates a conference with the parameters of the formulary<br />
  * Use cookies in cookie.txt
+ * \param int $id Use API id to modify it via API
  * \return API \a response in an array
  * \todo use formular to change values in the POSTFIELDS
  */
@@ -198,6 +199,7 @@ function confeature_api_update(int $id) {
 /**
  * \brief Delete a conference via Confeature API
  * \details Use cookies in cookie.txt
+ * \param int $id Use API id to modify it via API
  * \return API \a response in an array
  * 
  */

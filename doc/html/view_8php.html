@@ -104,107 +104,25 @@ $(document).ready(function(){initNavTree('view_8php.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">view.php File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacemod__confeature"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__confeature.html">mod_confeature</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ae97941710d863131c700f069b109991e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="view_8php.html#ae97941710d863131c700f069b109991e">$id</a> = optional_param('id', 0, PARAM_INT)</td></tr>
-<tr class="memdesc:ae97941710d863131c700f069b109991e"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Replace confeature with the name of your module and remove this line)  <a href="#ae97941710d863131c700f069b109991e">More...</a><br/></td></tr>
-<tr class="separator:ae97941710d863131c700f069b109991e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5fae90470d460a65d5211ec08e6b05c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="view_8php.html#aa5fae90470d460a65d5211ec08e6b05c">$n</a> = optional_param('n', 0, PARAM_INT)</td></tr>
-<tr class="separator:aa5fae90470d460a65d5211ec08e6b05c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e55d2fc7d7599dbe8a6ed40e67f653b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="view_8php.html#abf65f0046bca4eaf168cd62bab83f411">if</a>($id) elseif($n)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="view_8php.html#a0e55d2fc7d7599dbe8a6ed40e67f653b">else</a></td></tr>
-<tr class="separator:a0e55d2fc7d7599dbe8a6ed40e67f653b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae05dedb802ada0155efdece2044fed64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="view_8php.html#ae05dedb802ada0155efdece2044fed64">$context</a> = context_module::instance($cm-&gt;id)</td></tr>
-<tr class="separator:ae05dedb802ada0155efdece2044fed64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf65f0046bca4eaf168cd62bab83f411"><td class="memItemLeft" align="right" valign="top">if(has_capability('mod/confeature:createconference', <br class="typebreak"/>
-$context)) if(has_capability('mod/confeature:stream', <br class="typebreak"/>
-$context))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="view_8php.html#abf65f0046bca4eaf168cd62bab83f411">if</a> (has_capability('mod/confeature:watch', $context))</td></tr>
-<tr class="separator:abf65f0046bca4eaf168cd62bab83f411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="ae05dedb802ada0155efdece2044fed64"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">$context = context_module::instance($cm-&gt;id)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="ae97941710d863131c700f069b109991e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">$id = optional_param('id', 0, PARAM_INT)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Replace confeature with the name of your module and remove this line) </p>
-
-</div>
-</div>
-<a class="anchor" id="aa5fae90470d460a65d5211ec08e6b05c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">$n = optional_param('n', 0, PARAM_INT)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0e55d2fc7d7599dbe8a6ed40e67f653b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="view_8php.html#abf65f0046bca4eaf168cd62bab83f411">if</a> ($id) elseif ($n) else</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    error(<span class="stringliteral">&#39;You must specify a course_module ID or an instance ID&#39;</span>)</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a class="anchor" id="abf65f0046bca4eaf168cd62bab83f411"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">if (has_capability('mod/confeature:createconference', $context)) if (has_capability('mod/confeature:stream', $context)) if(has_capability('mod/confeature:watch', $context))</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<p>Main view of an instance of Confeature.  
+<a href="#details">More...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main view of an instance of Confeature. </p>
+<p>You can use capabilities to display specific code. </p>
+<dl class="section author"><dt>Author</dt><dd>Gautier Gramage </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Integrate main JS </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_73a9bd5ecae5111065e6eeb4021639f1.html">confeature</a></li><li class="navelem"><a class="el" href="view_8php.html">view.php</a></li>
-    <li class="footer">Generated on Wed Mar 19 2014 18:04:16 for Confeature Moodle Documentation by
+    <li class="footer">Generated on Fri Mar 21 2014 07:23:34 for Confeature Moodle Documentation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

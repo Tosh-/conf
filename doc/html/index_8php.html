@@ -104,137 +104,22 @@ $(document).ready(function(){initNavTree('index_8php.html','');});
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">index.php File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacemod__confeature"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemod__confeature.html">mod_confeature</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ae97941710d863131c700f069b109991e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8php.html#ae97941710d863131c700f069b109991e">$id</a> = required_param('id', PARAM_INT)</td></tr>
-<tr class="memdesc:ae97941710d863131c700f069b109991e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace confeature with the name of your module and remove this line.  <a href="#ae97941710d863131c700f069b109991e">More...</a><br/></td></tr>
-<tr class="separator:ae97941710d863131c700f069b109991e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cbf208c448812ce49f3fe3b7de082be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8php.html#a0cbf208c448812ce49f3fe3b7de082be">$course</a> = $DB-&gt;get_record('course', array('id' =&gt; $id), '*', MUST_EXIST)</td></tr>
-<tr class="separator:a0cbf208c448812ce49f3fe3b7de082be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a701989e53801a5375cfad4d1395ee8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8php.html#a4a701989e53801a5375cfad4d1395ee8">$coursecontext</a> = context_course::instance($course-&gt;id)</td></tr>
-<tr class="separator:a4a701989e53801a5375cfad4d1395ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96b34b1df0434e68adafe20938e2864a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="view_8php.html#abf65f0046bca4eaf168cd62bab83f411">if</a>(!$confeatures=get_all_instances_in_course('confeature', <br class="typebreak"/>
-$course))&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8php.html#a96b34b1df0434e68adafe20938e2864a">$table</a> = new html_table()</td></tr>
-<tr class="separator:a96b34b1df0434e68adafe20938e2864a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0799edd8facb2c34db7e8afb18dad21b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="view_8php.html#abf65f0046bca4eaf168cd62bab83f411">if</a>($course-&gt;format== 'weeks') <br class="typebreak"/>
-else <a class="el" href="view_8php.html#abf65f0046bca4eaf168cd62bab83f411">if</a>($course-&gt;format== <br class="typebreak"/>
-'topics')&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8php.html#a0799edd8facb2c34db7e8afb18dad21b">else</a></td></tr>
-<tr class="separator:a0799edd8facb2c34db7e8afb18dad21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8157eb76abbafb202f62b1c82d099159"><td class="memItemLeft" align="right" valign="top">$table&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8php.html#a8157eb76abbafb202f62b1c82d099159">align</a> = array('left', 'left', 'left')</td></tr>
-<tr class="separator:a8157eb76abbafb202f62b1c82d099159"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dfad6a7acd4569718f5bf04239e3e28"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="index_8php.html#a1dfad6a7acd4569718f5bf04239e3e28">foreach</a> ($confeatures as $confeature)</td></tr>
-<tr class="separator:a1dfad6a7acd4569718f5bf04239e3e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a0cbf208c448812ce49f3fe3b7de082be"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">$course = $DB-&gt;get_record('course', array('id' =&gt; $id), '*', MUST_EXIST)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="a4a701989e53801a5375cfad4d1395ee8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">$coursecontext = context_course::instance($course-&gt;id)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ae97941710d863131c700f069b109991e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">$id = required_param('id', PARAM_INT)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Replace confeature with the name of your module and remove this line. </p>
-
-</div>
-</div>
-<a class="anchor" id="a96b34b1df0434e68adafe20938e2864a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="view_8php.html#abf65f0046bca4eaf168cd62bab83f411">if</a> (!$confeatures=get_all_instances_in_course('confeature', $course)) $table = new html_table()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a8157eb76abbafb202f62b1c82d099159"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">$table align = array('left', 'left', 'left')</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a0799edd8facb2c34db7e8afb18dad21b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="view_8php.html#abf65f0046bca4eaf168cd62bab83f411">if</a> ($course-&gt;format== 'weeks') else <a class="el" href="view_8php.html#abf65f0046bca4eaf168cd62bab83f411">if</a> ($course-&gt;format== 'topics') else</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">{</div>
-<div class="line">    <a class="code" href="index_8php.html#a96b34b1df0434e68adafe20938e2864a">$table</a>-&gt;head  = array(get_string(<span class="stringliteral">&#39;name&#39;</span>))</div>
-<div class="ttc" id="index_8php_html_a96b34b1df0434e68adafe20938e2864a"><div class="ttname"><a href="index_8php.html#a96b34b1df0434e68adafe20938e2864a">$table</a></div><div class="ttdeci">if(!$confeatures=get_all_instances_in_course('confeature', $course)) $table</div><div class="ttdef"><b>Definition:</b> index.php:55</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a class="anchor" id="a1dfad6a7acd4569718f5bf04239e3e28"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">foreach($confeatures as $confeature)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<p>I have no idea of what it is for ...  
+<a href="#details">More...</a></p>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>I have no idea of what it is for ... </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_73a9bd5ecae5111065e6eeb4021639f1.html">confeature</a></li><li class="navelem"><a class="el" href="index_8php.html">index.php</a></li>
-    <li class="footer">Generated on Wed Mar 19 2014 18:04:16 for Confeature Moodle Documentation by
+    <li class="footer">Generated on Fri Mar 21 2014 07:23:34 for Confeature Moodle Documentation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

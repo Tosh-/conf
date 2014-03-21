@@ -7,12 +7,12 @@
 
 var indexSectionsWithContent =
 {
-  0: "$acdefgilmrtuvx",
+  0: "$acdgilmrtuvx",
   1: "m",
   2: "m",
   3: "acgilmuv",
   4: "cdx",
-  5: "$acefirv",
+  5: "$crv",
   6: "t"
 };
 

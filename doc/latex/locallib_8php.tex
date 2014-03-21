@@ -14,7 +14,11 @@ Internal library of functions for Confeature Moodle.
 \hyperlink{locallib_8php_a7acfa5bd6b3fa64681a044cfa5360652}{confeature\-\_\-api\-\_\-logout} ()
 \begin{DoxyCompactList}\small\item\em Logout function to disconnect from Confeature A\-P\-I. \end{DoxyCompactList}\item 
 \hyperlink{locallib_8php_a7dc79dc02ce145c489edd4734a207278}{confeature\-\_\-api\-\_\-create} ()
-\begin{DoxyCompactList}\small\item\em Create a conference via Confeature A\-P\-I. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Create a conference via Confeature A\-P\-I. \end{DoxyCompactList}\item 
+\hyperlink{locallib_8php_a64452cfcadb12a7da4c87cdcb94ea6a4}{confeature\-\_\-api\-\_\-update} (int \$id)
+\begin{DoxyCompactList}\small\item\em Update a conference via Confeature A\-P\-I. \end{DoxyCompactList}\item 
+\hyperlink{locallib_8php_a2771af186ff1cbf0e13dff93e959f0c2}{confeature\-\_\-api\-\_\-delete} (int \$id)
+\begin{DoxyCompactList}\small\item\em Delete a conference via Confeature A\-P\-I. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,7 +31,7 @@ Internal library of functions for Confeature Moodle. All the Confeature A\-P\-I 
 Gautier Gramage 
 \end{DoxyAuthor}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000002}{Todo}]Never include this file from your \hyperlink{lib_8php}{lib.\-php}!\end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000003}{Todo}]Never include this file from your \hyperlink{lib_8php}{lib.\-php}!\end{DoxyRefDesc}
 
 
 \subsection{Function Documentation}
@@ -47,7 +51,26 @@ It creates a conference with the parameters of the formulary\par
 A\-P\-I {\itshape response} in an array 
 \end{DoxyReturn}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000005}{Todo}]use formular to change values in the P\-O\-S\-T\-F\-I\-E\-L\-D\-S \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000006}{Todo}]use formular to change values in the P\-O\-S\-T\-F\-I\-E\-L\-D\-S \end{DoxyRefDesc}
+\hypertarget{locallib_8php_a2771af186ff1cbf0e13dff93e959f0c2}{\index{locallib.\-php@{locallib.\-php}!confeature\-\_\-api\-\_\-delete@{confeature\-\_\-api\-\_\-delete}}
+\index{confeature\-\_\-api\-\_\-delete@{confeature\-\_\-api\-\_\-delete}!locallib.php@{locallib.\-php}}
+\subsubsection[{confeature\-\_\-api\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-api\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{int}]{\$id}
+\end{DoxyParamCaption}
+)}}\label{locallib_8php_a2771af186ff1cbf0e13dff93e959f0c2}
+
+
+Delete a conference via Confeature A\-P\-I. 
+
+Use cookies in cookie.\-txt 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & Use A\-P\-I id to modify it via A\-P\-I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-I {\itshape response} in an array 
+\end{DoxyReturn}
 \hypertarget{locallib_8php_a0034931acefd021a0147a0216bc0a6a8}{\index{locallib.\-php@{locallib.\-php}!confeature\-\_\-api\-\_\-login@{confeature\-\_\-api\-\_\-login}}
 \index{confeature\-\_\-api\-\_\-login@{confeature\-\_\-api\-\_\-login}!locallib.php@{locallib.\-php}}
 \subsubsection[{confeature\-\_\-api\-\_\-login}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-api\-\_\-login (
@@ -64,7 +87,7 @@ Store cookies in cookie.\-txt to keep session logged.\par
 boolean Connection success ({\itshape true}) or failure ({\itshape false}) 
 \end{DoxyReturn}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000003}{Todo}]return conditions \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000004}{Todo}]return conditions \end{DoxyRefDesc}
 \hypertarget{locallib_8php_a7acfa5bd6b3fa64681a044cfa5360652}{\index{locallib.\-php@{locallib.\-php}!confeature\-\_\-api\-\_\-logout@{confeature\-\_\-api\-\_\-logout}}
 \index{confeature\-\_\-api\-\_\-logout@{confeature\-\_\-api\-\_\-logout}!locallib.php@{locallib.\-php}}
 \subsubsection[{confeature\-\_\-api\-\_\-logout}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-api\-\_\-logout (
@@ -80,7 +103,29 @@ Use cookies in cookie.\-txt. \begin{DoxyReturn}{Returns}
 boolean Disconnection success ({\itshape true}) or failure ({\itshape false}) 
 \end{DoxyReturn}
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000004}{Todo}]return conditions \end{DoxyRefDesc}
+\item[\hyperlink{todo__todo000005}{Todo}]return conditions \end{DoxyRefDesc}
+\hypertarget{locallib_8php_a64452cfcadb12a7da4c87cdcb94ea6a4}{\index{locallib.\-php@{locallib.\-php}!confeature\-\_\-api\-\_\-update@{confeature\-\_\-api\-\_\-update}}
+\index{confeature\-\_\-api\-\_\-update@{confeature\-\_\-api\-\_\-update}!locallib.php@{locallib.\-php}}
+\subsubsection[{confeature\-\_\-api\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}confeature\-\_\-api\-\_\-update (
+\begin{DoxyParamCaption}
+\item[{int}]{\$id}
+\end{DoxyParamCaption}
+)}}\label{locallib_8php_a64452cfcadb12a7da4c87cdcb94ea6a4}
+
+
+Update a conference via Confeature A\-P\-I. 
+
+It updates a conference with the parameters of the formulary\par
+ Use cookies in cookie.\-txt 
+\begin{DoxyParams}[1]{Parameters}
+int & {\em \$id} & Use A\-P\-I id to modify it via A\-P\-I \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-I {\itshape response} in an array 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000007}{Todo}]use formular to change values in the P\-O\-S\-T\-F\-I\-E\-L\-D\-S \end{DoxyRefDesc}
 
 
 \subsection{Variable Documentation}

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['lib_2ephp',['lib.php',['../lib_8php.html',1,'']]],
-  ['locallib_2ephp',['locallib.php',['../locallib_8php.html',1,'']]],
-  ['log_2ephp',['log.php',['../log_8php.html',1,'']]]
+  ['requires',['requires',['../version_8php.html#a4c0ff460b6d47c1f7d1a74f2f5d74b9f',1,'version.php']]]
 ];

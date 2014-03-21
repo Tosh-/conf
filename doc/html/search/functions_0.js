@@ -2,8 +2,10 @@ var searchData=
 [
   ['confeature_5fadd_5finstance',['confeature_add_instance',['../lib_8php.html#a7e22c75c28ab3ae8b48c1d332f648fc5',1,'lib.php']]],
   ['confeature_5fapi_5fcreate',['confeature_api_create',['../locallib_8php.html#a7dc79dc02ce145c489edd4734a207278',1,'locallib.php']]],
+  ['confeature_5fapi_5fdelete',['confeature_api_delete',['../locallib_8php.html#a2771af186ff1cbf0e13dff93e959f0c2',1,'locallib.php']]],
   ['confeature_5fapi_5flogin',['confeature_api_login',['../locallib_8php.html#a0034931acefd021a0147a0216bc0a6a8',1,'locallib.php']]],
   ['confeature_5fapi_5flogout',['confeature_api_logout',['../locallib_8php.html#a7acfa5bd6b3fa64681a044cfa5360652',1,'locallib.php']]],
+  ['confeature_5fapi_5fupdate',['confeature_api_update',['../locallib_8php.html#a64452cfcadb12a7da4c87cdcb94ea6a4',1,'locallib.php']]],
   ['confeature_5fcron',['confeature_cron',['../lib_8php.html#aef534dc463e45aa37218730f6ee5f4e1',1,'lib.php']]],
   ['confeature_5fdelete_5finstance',['confeature_delete_instance',['../lib_8php.html#ae40b9e515633066eb722f342cd2588cf',1,'lib.php']]],
   ['confeature_5fextend_5fnavigation',['confeature_extend_navigation',['../lib_8php.html#a93de60bc5ca5f3fb9d14c8b92e0dfbac',1,'lib.php']]],
